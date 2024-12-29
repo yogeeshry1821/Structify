@@ -1,0 +1,30 @@
+{
+  "name": "structify-cli",
+  "version": "1.0.0",
+  "description": "CLI tool to recognize and create folder structures.",
+  "main": "index.js",
+  "bin": {
+    "structify": "./bin/cli.js"
+  },
+  "scripts": {
+    "test": "mocha tests/exportStructure.test.js"
+  },
+  "keywords": [
+    "folder",
+    "structure",
+    "cli",
+    "json"
+  ],
+  "author": "Yogeesh",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "structify-cli": "^1.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^11.0.1"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
+}

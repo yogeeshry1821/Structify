@@ -19,6 +19,7 @@
   "license": "MIT",
   "dependencies": {
     "commander": "^11.0.0",
+    "inquirer": "^12.3.0",
     "structify-cli": "^1.0.0"
   },
   "devDependencies": {

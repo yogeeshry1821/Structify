@@ -12,10 +12,11 @@ program
 // Export folder structure
 program
     .command('export <dir>')
-    .description('Export folder structure to JSON')
+    .description('Export folder structure to a specified format')
     .option('-o, --output <file>', 'Output file', 'structure.json')
+    .option('--format <type>', 'Format of the folder structure (json, line, arrow)', 'json')
     .action((dir, options) => {
-        exportStructure(dir, options.output);
+        exportStructure(dir, options.output, options.format);
     });
 
 // Create folder structure

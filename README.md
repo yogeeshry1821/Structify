@@ -20,53 +20,56 @@ You can install `Structify` globally or locally. To use it, you'll need to insta
 To install the tool globally, run:
 
 ```bash
-npm install -g structify-cli
-
+  npm install -g structify-cli
+```
 
 ```bash
 yarn global add structify-cli
-
+```
 ### Install Globally
 
 To install the tool globally, run:
 
 ```bash
 npm install -g structify-cli
+```
 
 ```bash
 yarn global add structify-cli
-
+```
 Once installed globally, you can run the structify command from anywhere in your terminal.
 
-Install Locally
+# Install Locally
 To install the tool locally for your project:
 
-bash
-Copy code
+``` bash
 npm install structify-cli --save-dev
+```
 or
 
-bash
-Copy code
+```bash
 yarn add structify-cli --dev
+```
+
 After installing it locally, you can run the tool via npx without the need for global installation:
 
-bash
-Copy code
+```bash
 npx structify-cli <command>
-Usage
+```
+
+# Usage
 Once installed, you can use structify via your terminal to create or generate folder structures.
 
 1. Create Folder Structure
 To create a folder structure from a specified JSON format, use the following command:
 
-bash
-Copy code
+```bash
 structify create <structure>
+```
+
 Where <structure> is a JSON object defining your desired folder structure. For example:
 
-json
-Copy code
+```json
 {
   "src": {
     "components": {},
@@ -74,26 +77,25 @@ Copy code
   },
   "tests": {}
 }
+```
+
 This will create the following directory structure:
 
-css
-Copy code
-src/
+```src/
 ├── components/
 ├── utils/
 tests/
+```
 2. Generate JSON Representation of Your Folder Structure
 If you want to generate a JSON representation of your existing project structure, use:
-
-bash
-Copy code
+```bash
 structify generate
+```
 This will scan the current directory and output the folder structure as a JSON object.
 
 Example output:
 
-json
-Copy code
+```json
 {
   "src": {
     "index.js": {},
@@ -101,17 +103,19 @@ Copy code
   },
   "tests": {}
 }
+```
 3. Add Extensions to Folder Names
 You can also create folder names with extensions by specifying them in the structure JSON. For example:
 
-json
-Copy code
+```json
 {
   "src": {
     "components.tsx": {},
     "utils.js": {}
   }
+
 }
+```
 This will create:
 
 css

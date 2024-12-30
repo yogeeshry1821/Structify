@@ -1,6 +1,6 @@
 {
   "name": "structify-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI tool to recognize and create folder structures.",
   "main": "index.js",
   "bin": {
@@ -26,6 +26,6 @@
     "mocha": "^11.0.1"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://registry.npmjs.org/"
   }
 }

@@ -118,10 +118,11 @@ You can also create folder names with extensions by specifying them in the struc
 ```
 This will create:
 
-css
+```bash
 src/
 ├── components.tsx/
 ├── utils.js/
+```
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.

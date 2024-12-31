@@ -1,6 +1,6 @@
 {
   "name": "structify-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "CLI tool to recognize and create folder structures.",
   "main": "index.js",
   "bin": {

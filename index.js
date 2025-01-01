@@ -1,5 +1,5 @@
 const { Command } = require('commander');
-const { exportStructure } = require('./lib/exportStructure');
+const { exportStructure, interactiveMode } = require('./lib/exportStructure');
 const { createStructure } = require('./lib/createStructure');
 
 const program = new Command();
@@ -26,5 +26,17 @@ program
     .action((jsonFile, targetDir) => {
         createStructure(jsonFile, targetDir);
     });
+
+// Interactive mode
+program
+    .command('interactive')
+    .description('Start an interactive session')
+    .action(() => {
+        interactiveMode();
+    });
+
+if (require.main === module) {
+    program.parse(process.argv);
+}
 
 module.exports = program;

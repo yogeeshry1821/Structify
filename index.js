@@ -1,6 +1,8 @@
 const { Command } = require('commander');
 const { exportStructure, interactiveMode } = require('./lib/exportStructure');
 const { createStructure } = require('./lib/createStructure');
+const { generateApiStructure } = require('./lib/generateApiStructure');
+const { generateStructureFromDiagram } = require('./lib/fromDiagram');
 
 const program = new Command();
 
@@ -33,6 +35,19 @@ program
     .description('Start an interactive session')
     .action(() => {
         interactiveMode();
+    });
+program
+    .command('apistr <jsonFile> <targetDir>')
+    .description('Generate folder structure for API endpoints')
+    .action((jsonFile, targetDir) => {
+        generateApiStructure(jsonFile, targetDir);
+    });
+program
+    .command('from-diagram <parsedDataFile> <targetDir>')
+    .description('Generate folder structure from parsed system design diagram')
+    .action((parsedDataFile, targetDir) => {
+        const parsedData = require(parsedDataFile);
+        generateStructureFromDiagram(parsedData, targetDir);
     });
 
 if (require.main === module) {
